@@ -21,7 +21,10 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run() {
     // const serviceCollection = client.db('geniusCarDB').collection('services')
     const serviceCollection = client.db('cena_dental_care').collection('services')
+    const reviewCollection = client.db('cena_dental_care').collection('reviews')
   try {
+
+    //services
     app.get('/services',async(req,res)=>{
         const query = {}
         const cursor = serviceCollection.find(query)
@@ -33,6 +36,21 @@ async function run() {
         const query = { _id: ObjectId(id) }
         const service = await serviceCollection.findOne(query)
         res.send(service)
+    })
+
+    // reviews
+
+    app.post('/review', async(req,res)=>{
+        const review = req.body
+        const result = await reviewCollection.insertOne(review)
+        res.send(result)
+    })
+
+    app.get('/reviews',async(req,res)=>{
+        const query = {}
+        const cursor = reviewCollection.find(query)
+        const reviews = await cursor.toArray()
+        res.send(reviews)
     })
   } finally {
    
