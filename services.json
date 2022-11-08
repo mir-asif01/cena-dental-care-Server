@@ -1,0 +1,38 @@
+[
+    {
+        "serviceId" : "1",
+        "name" : "X-Ray",
+        "img" : "",
+        "price" : "119"
+    },
+    {
+        "serviceId" : "2",
+        "name" : "Dental Cleanings",
+        "img" : "",
+        "price" : "79"
+    },
+    {
+        "serviceId" : "3",
+        "name" : "Root Canals",
+        "img" : "",
+        "price" : "159"
+    },
+    {
+        "serviceId" : "4",
+        "name" : "Implants",
+        "img" : "",
+        "price" : "130"
+    },
+    {
+        "serviceId" : "5",
+        "name" : "Orthodontics",
+        "img" : "",
+        "price" : "129"
+    },
+    {
+        "serviceId" : "6",
+        "name" : "Whitening",
+        "img" : "",
+        "price" : "29"
+    }
+]
