@@ -2,37 +2,43 @@
     {
         "serviceId" : "1",
         "name" : "X-Ray",
-        "img" : "",
-        "price" : "119"
+        "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9fm6sUPnxNVPsVFshdYZ0xZzWrA_wopVOBbOioiHCCtHR_vVMtkVemE2cZTElYpk43J4&usqp=CAU",
+        "price" : "119",
+        "desc" : "Dental X-rays are images of your teeth that your dentist uses to evaluate your oral health."
     },
     {
         "serviceId" : "2",
         "name" : "Dental Cleanings",
-        "img" : "",
-        "price" : "79"
+        "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAOmoZpvvNsq2OXkKF7RhHzGfbr2c1HlN_uDLsaEK6pDQTVZ5uaFyJKluqr7gM5Jhz_9M&usqp=CAU",
+        "price" : "79",
+        "desc" : "There are three types of dental cleanings: prophylaxis cleaning,root planing and gross debridement."
     },
     {
         "serviceId" : "3",
         "name" : "Root Canals",
-        "img" : "",
-        "price" : "159"
+        "img" : "https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/19/10/13/de00010-overview-of-root-canal-treatment.jpg",
+        "price" : "159",
+        "desc" : "Root canal treatment is a dental procedure used to treat infection at the centre of a tooth."
     },
     {
         "serviceId" : "4",
         "name" : "Implants",
-        "img" : "",
-        "price" : "130"
+        "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8IXfGxX1hGC1bjin4IVMQN6qDNlyZOMJB3ikuMELwc5K04XlEZsRrCtBqZA8W9lCpKWw&usqp=CAU",
+        "price" : "130",
+        "desc" : "Dental implants are replacement tooth roots."
     },
     {
         "serviceId" : "5",
         "name" : "Orthodontics",
-        "img" : "",
-        "price" : "129"
+        "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbkqTnHBg5KK5eTun48fUdrRWOMqzI9YKOJA&usqp=CAU",
+        "price" : "129",
+        "desc" : "Orthodontics is a dentistry specialty that addresses the diagnosis, prevention, management."
     },
     {
         "serviceId" : "6",
         "name" : "Whitening",
-        "img" : "",
-        "price" : "29"
+        "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsxje9umGM7l6VTx05yWrRQzuDSiB5PLq4ng&usqp=CAU",
+        "price" : "29",
+        "desc" : "Teeth whitening involves bleaching your teeth to make them lighter."
     }
 ]
