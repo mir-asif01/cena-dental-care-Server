@@ -8,11 +8,9 @@ require('dotenv').config()
 app.use(cors())
 app.use(express.json())
 
-
 app.get('/',(req,res)=>{
-    res.send('Cena dental care server running');
+    res.send('Server running');
 })
-
 
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.mtnbd39.mongodb.net/?retryWrites=true&w=majority`;
@@ -23,6 +21,14 @@ async function run() {
     const serviceCollection = client.db('cena_dental_care').collection('services')
     const reviewCollection = client.db('cena_dental_care').collection('reviews')
   try {
+
+    // homepage services
+    app.get('/home',async(req,res)=>{
+        const query = {}
+        const cursor = serviceCollection.find(query).limit(3)
+        const homepageServices = await cursor.toArray()
+        res.send(homepageServices)
+    })
 
     //services
     app.get('/services',async(req,res)=>{
