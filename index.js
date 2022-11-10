@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+const { query } = require('express');
 const port = process.env.PORT || 5000
 require('dotenv').config()
 
@@ -56,6 +57,13 @@ async function run() {
             res.send(result)
         })
 
+        app.get('/reviews/:id',async(req,res)=>{
+            const id = req.params.id;
+            const query = {_id : ObjectId(id)}
+            const result = await reviewCollection.findOne(query)
+            res.send(result)
+        })
+
         app.get('/reviews', async (req, res) => {
             let query = {}
             if (req?.query.serviceId) {
@@ -86,10 +94,19 @@ async function run() {
             //update review
             app.put('/reviews/:id',(req,res)=>{
                 const id = req.params.id;
-                const query = {_id : ObjectId(id)}
-                // const update = {$set : } 
+                const Text = req.body;
+                // const text = updatedText.updatedText
+                // console.log(text)
+                // const updatedText = req.body.updatedText.editedText;
 
-                // const update = { $set: { name: "Deli Llama", address: "3 Nassau St" }};
+                console.log(id,Text)
+
+                // const query = {_id : ObjectId(id)}
+                // const update = { $set: {reviewText : updatedText}};
+                // const options = {};
+
+                // const result = await reviewCollection.updateOne(query, update, options)
+                console.log('Hello')
             })
 
         })
