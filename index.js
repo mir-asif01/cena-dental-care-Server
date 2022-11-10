@@ -26,7 +26,7 @@ async function run() {
         app.get('/home', async (req, res) => {
             const query = {}
             const cursor = serviceCollection.find(query).limit(3)
-            const homepageServices = await cursor.toArray()
+            const homepageServices = await cursor.sort({ _id: -1 }).toArray()
             res.send(homepageServices)
         })
 
@@ -43,7 +43,11 @@ async function run() {
             const service = await serviceCollection.findOne(query)
             res.send(service)
         })
-
+        app.post('/services',async(req,res)=>{
+            const service = req.body
+            const result = await serviceCollection.insertOne(service)
+            res.send(result)
+        })
         // reviews
 
         app.post('/review', async (req, res) => {
@@ -71,11 +75,21 @@ async function run() {
                 res.send(reviews)
             }
 
+            //delete review
             app.delete('/reviews/:id', async (req, res) => {
                 const id = req.params.id
                 const query = { _id: ObjectId(id) }
                 const result = await reviewCollection.deleteOne(query)
                 res.send(result)
+            })
+
+            //update review
+            app.put('/reviews/:id',(req,res)=>{
+                const id = req.params.id;
+                const query = {_id : ObjectId(id)}
+                // const update = {$set : } 
+
+                // const update = { $set: { name: "Deli Llama", address: "3 Nassau St" }};
             })
 
         })
