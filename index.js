@@ -106,7 +106,7 @@ async function run() {
                 // const options = {};
 
                 // const result = await reviewCollection.updateOne(query, update, options)
-                console.log('Hello')
+                // console.log('Hello')
             })
 
         })
