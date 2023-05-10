@@ -120,5 +120,5 @@ run().catch(console.dir);
 
 
 app.listen(port, () => {
-    console.log(`This is app running on port ${port}`)
+    console.log(`This is app running on port http://localhost:${port}`)
 })
