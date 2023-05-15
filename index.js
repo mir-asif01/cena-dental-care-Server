@@ -99,7 +99,7 @@ async function run() {
                 // console.log(text)
                 // const updatedText = req.body.updatedText.editedText;
 
-                console.log(id,Text)
+                // console.log(id,Text)
 
                 // const query = {_id : ObjectId(id)}
                 // const update = { $set: {reviewText : updatedText}};
@@ -107,6 +107,22 @@ async function run() {
 
                 // const result = await reviewCollection.updateOne(query, update, options)
                 // console.log('Hello')
+
+//                 db.movies.updateOne( { title: "Tag" },
+// {
+//   $set: {
+//     plot: "One month every year, five highly competitive friends
+//            hit the ground running for a no-holds-barred game of tag"
+//   }
+//   { $currentDate: { lastUpdated: true } }
+// })
+                // reviewCollection.updateOne({_id : ObjectId(id)},{
+                //     $set : {
+                //         reviewText : Text
+                //     },
+                //     $currentDate : {lastUpdated : true}
+                // })
+
             })
 
         })
