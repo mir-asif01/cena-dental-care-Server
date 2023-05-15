@@ -116,12 +116,12 @@ async function run() {
 //   }
 //   { $currentDate: { lastUpdated: true } }
 // })
-                // reviewCollection.updateOne({_id : ObjectId(id)},{
-                //     $set : {
-                //         reviewText : Text
-                //     },
-                //     $currentDate : {lastUpdated : true}
-                // })
+                reviewCollection.updateOne({_id : ObjectId(id)},{
+                    $set : {
+                        reviewText : Text.editedText
+                    },
+                    $currentDate : {lastUpdated : true}
+                })
 
             })
 
